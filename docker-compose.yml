@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  rabbitmq:
+    restart: always
+    image: rabbitmq:1.0.0
+    container_name: rabbitmq
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - data_rabbitmq:/var/lib/rabbitmq
+    ports :
+      - "1883:1883"
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - default
+    external_hosts:
+      - consul:cunsul
+volumes:
+  data_rabbitmq
+ 
