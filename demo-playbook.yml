@@ -4,8 +4,7 @@
 
   tasks:
 
-  - name: RabbitMQ Cluster Services
-    docker_compose:
-      project_src: .
-      build: yes
-      state: present
+  - docker_compose:
+    project_src: .
+    build: yes
+    state: present
