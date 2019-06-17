@@ -1,10 +1,10 @@
 ---
-- name: RabbitMQ cluster Demo
+- name: RabbitMQ Cluster Demo
   hosts: all
 
   tasks:
 
-  - name:
+  - name: RabbitMQ Cluster Services
     docker_compose:
       project_src: .
       build: yes
